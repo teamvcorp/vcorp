@@ -1,0 +1,74 @@
+/* Header Top */
+.headerTop {
+    border-bottom: 10px solid var(--blue);
+    height: 20rem;
+    width: 100%;
+    background-color: var(--navy);
+    display: flex;
+}
+
+.headerTop div {
+    background-color: white;
+    width: 20rem;
+    height: 25rem;
+    margin-left: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+}
+
+.headerTop ul{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    grid-gap: 13rem;
+    list-style: none;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    height: 90%;
+}
+
+/* header bottom-hero */
+.headerBottom {
+    background-image: url(/group.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerBottomContent {
+    margin-left: 5rem;
+    height: 100%;
+}
+
+.headerBottom h1 {
+    font-size: 7rem;
+    text-transform: none;
+}
+
+.headerBottom h2 {
+margin-top:45vh;
+}
+
+.headerBottom p{
+    float: right;
+    text-align: right;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.headerBottom button {
+    margin: 5rem 0;
+}
+
+/* Card */
+.aboutContainer {
+    
+}

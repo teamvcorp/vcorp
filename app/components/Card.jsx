@@ -15,4 +15,4 @@ const Card = ({title, iconName, children}) => {
   )
 }
 
-export default Card 
+export default Card   

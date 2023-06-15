@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-
 import Navigation from "./components/nav";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
+import {FaRegHandshake, FaHandHoldingUsd, FaGraduationCap} from 'react-icons/fa'
+
 
 export default function Home() {
   return (
@@ -13,64 +14,69 @@ export default function Home() {
         <Navigation />
       </section>
       <section className={styles.about}>
-        <h1>About</h1>
-        {/* <h1 className={styles.red}>ABout red</h1> */}
-        <h2>Von Der Becke Academy Corp </h2>
-        <h3>Mission Statement</h3>
-        <p>
+        <div className={styles.aboutContainer}>  
+        <h1 className="blueTxt">About</h1>
+        <h2>The Von Der Becke Academy Corp </h2>
+        <h3 className="navyTxt">Mission Statement</h3>
+        <p className="italicP">
           Enabling transformative change through the power of education,
           compassion, and innovative problem-solving.
         </p>
         <p>
           Image a world where you could just live, were things you need to
           survive are just there for you and opportunity is always knocking. I
-          bet you can recal a day that you have said something like, "Man if I
+          bet you can recall a day that you have said something like, "Man if I
           only knew, things would be different!". We aim to help you achieve
           that our programs look to solve problems like housing, health and
           fitness, food sustainability, educational disparities, and social
           inclusion. The Von Der Becke academy feels strongly that each
-          individual has somthing postive to contribut to our society and if we
+          individual has somthing postive to contribute to our society and if we
           remove the unessary burdons and limition created by finaincial and
           social status the world may just shine that much brighter. Stand with
           us as a united people under one God.
         </p>
+        </div>
       </section>
       <section className={styles.projects}>
+        <h1 className="whtTxt">Projects</h1>
         <div className={styles.projectContainer}>
           <div className="leftSide">
             <h2>Simple AI</h2>
-            <Image src="/imagename.jpeg" width="25" height="25"></Image>
+            <span className="iconCircle"> <FaHandHoldingUsd size={45} color='white'/> </span>
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam
             </p>
             <Link href="/thewebsite.com">
-              <button>Visit WebSite</button>
+              <button className="navyBtn">Visit WebSite</button>
             </Link>
           </div>
+          <span className={styles.line}></span>
           <div className="center">
             <h2>Bid Democracy</h2>
-            <Image src="/imagename.jpeg" width="25" height="25"></Image>
+            <span className="iconCircle"> <FaRegHandshake size={45} color='white'/> </span>
+       
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam
             </p>
             <Link href="/thewebsite.com">
-              <button>Visit WebSite</button>
+              <button className="navyBtn">Visit WebSite</button>
             </Link>
           </div>
+          <span className={styles.line}></span>
           <div className="rightSide">
             <h2>Career Development</h2>
-            <Image src="/imagename.jpeg" width="25" height="25"></Image>
+            <span className="iconCircle"> <FaGraduationCap size={45} color='white'/> </span>
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam
             </p>
             <Link href="/thewebsite.com">
-              <button>Visit WebSite</button>
+              <button className="navyBtn">Visit WebSite</button>
             </Link>
           </div>
         </div>
@@ -78,9 +84,9 @@ export default function Home() {
       <section className={styles.donate}>
         <div className={styles.donateContainer}>
           <div className="leftSide">
-            <Image src="/imagename.jpeg" width={25} height={25}></Image>
-            <Image src="/imagename.jpeg" width={25} height={25}></Image>
-            <Image src="/imagename.jpeg" width={25} height={25}></Image>
+            <Image src="/imagename.jpeg" width={25} height={25} alt="random person"/>
+            <Image src="/imagename.jpeg" width={25} height={25} alt="random person"/>
+            <Image src="/imagename.jpeg" width={25} height={25} alt="random person"/>
           </div>
           <div className="rightSide">
             <h1>Donate</h1>
@@ -92,7 +98,7 @@ export default function Home() {
               tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
               voluptua
             </p>
-            <Link href="/">
+            <Link href="/donate">
               <button>Create and Impact</button>
             </Link>
           </div>
@@ -101,13 +107,8 @@ export default function Home() {
       <section className={styles.volunteer}>
         <h1>Volunteer</h1>
         <div className={styles.topSection}>
-          <image
-            className="rightSide"
-            src="/imagename"
-            width={25}
-            height={25}
-          ></image>
-          <div className="leftSide">
+          <Image className="leftSide" src="/imagename" width={25} height={25} alt="random person"/>
+          <div className="rightSide">
             <h2>you can be a hero!</h2>
             <p>
               Volunteer today and join an amazing team of people that are
