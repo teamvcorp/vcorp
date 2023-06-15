@@ -84,9 +84,9 @@ export default function Home() {
       <section className={styles.donate}>
         <div className={styles.donateContainer}>
           <div className="leftSide">
+            {/* <Image src="/imagename.jpeg" width={25} height={25} alt="random person"/>
             <Image src="/imagename.jpeg" width={25} height={25} alt="random person"/>
-            <Image src="/imagename.jpeg" width={25} height={25} alt="random person"/>
-            <Image src="/imagename.jpeg" width={25} height={25} alt="random person"/>
+            <Image src="/imagename.jpeg" width={25} height={25} alt="random person"/> */}
           </div>
           <div className="rightSide">
             <h1>Donate</h1>
