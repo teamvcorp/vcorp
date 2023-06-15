@@ -1,10 +1,10 @@
 import "./globals.css";
-import { Lato } from "next/font/google";
+// import { Lato } from "next/font/google";
 
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
-});
+// const lato = Lato({
+//   subsets: ["latin"],
+//   weight: ["100", "300", "400", "700", "900"],
+// });
 
 export const metadata = {
   title: "Von Der Becke Academy Corp",
