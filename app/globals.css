@@ -1,27 +1,32 @@
 * {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
-  
 }
-
+#homeIcon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
 :root {
   --red: #ff0000;
-  --navy:#1e2338;
+  --navy: #1e2338;
   --blue: #0081c6;
   --ltBlue: #81ddf9;
 
   /* Background color */
-  --ltGrey: #f1f7ff; 
+  --ltGrey: #f1f7ff;
   /* input placeholder text color */
   --grey: #b5b5b5;
 }
 
 html {
   font-size: 62.5%;
-  /* font-family: 'lato', sans-serif; */
-}
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 
+  font-family: 'lato', sans-serif;
+}
 
 h1 {
   font-size: 7rem;
@@ -32,15 +37,15 @@ h1 {
 h2 {
   font-size: 5rem;
   font-weight: 700;
-  color:  #1e2338;
+  color: #1e2338;
 }
 
-h3{
+h3 {
   font-size: 4rem;
   font-weight: 400;
   color: white;
 }
-p {
+p, span {
   font-size: 2.5rem;
   line-height: 4rem;
 }
@@ -56,7 +61,7 @@ p {
   color: #81ddf9;
 }
 .blueTxt {
-  color: #0081c6; 
+  color: #0081c6;
 }
 .navyTxt {
   color: #1e2338;
@@ -74,8 +79,8 @@ button {
   text-transform: uppercase;
   border-radius: 5rem;
   border: 1px solid white;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .redBtn {
   background-color: #ff0000;
@@ -83,20 +88,44 @@ button {
 
 .navyBtn {
   background-color: #1e2338;
-
 }
 .leftSide {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   width: 40%;
+ 
+  
 }
+
+.greyLeftSide {
+  background-color: var(--ltGrey);
+  grid-gap: 3rem;
+  height: 100vh;
+
+}
+
 .rightSide {
-display: flex;
-flex-direction: column;
-width: 60%;
-grid-gap: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  grid-gap: 5rem;
+  
+}
+
+.rightSideRed {
+  background-color: var(--red);
+  color: white;
+  padding: 10rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rightSideVolunteer {
+
 }
 
 .iconCircle {
@@ -109,8 +138,6 @@ grid-gap: 5rem;
   align-items: center;
   justify-content: center;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   :root {

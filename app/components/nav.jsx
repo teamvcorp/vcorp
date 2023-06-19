@@ -1,10 +1,13 @@
+"use client";
 
 import React from "react";
-import Image from 'next/image'
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./components.module.css";
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
+  const pathname = usePathname();
 
   return (
     <>
@@ -12,7 +15,7 @@ const Navigation = () => {
         <div className={styles.headerLogoContainer}>
           <Image
             className={styles.headerLogo}
-            src='/valogo.png'
+            src="/valogo.png"
             width={175}
             height={200}
             alt="random people"
@@ -21,41 +24,37 @@ const Navigation = () => {
         <ul>
           <li></li>
           <li>
-            <Link href="/">About</Link>
+            <Link href={`${pathname}#about`}>About</Link>
           </li>
           <li>
-            <Link href="/">Projects</Link>
+            <Link href={`${pathname}#projects`}>Projects</Link>
           </li>
           <li>
-            <Link href="/">Volunteer</Link>
+            <Link href={`${pathname}#volunteer`}>Volunteer</Link>
           </li>
           <li>
-            <Link href="/">Donate</Link>
+            <Link href={`${pathname}#donate`}>Donate</Link>
           </li>
           <li>
-            <Link href="/">Careers</Link>
+            <Link href={`${pathname}#careers`}>Careers</Link>
           </li>
           <li>
-            <Link href="/">Resources</Link>
+            <Link href={`${pathname}#resources`}>Resources</Link>
           </li>
         </ul>{" "}
       </div>
 
       <div className={styles.headerBottom}>
-  
-          <div className={styles.headerBottomContent}>
-        <h2 className="whtTxt">Projects Designed to</h2>
-        <h1 className="ltBlueTxt">Better Society Through the Individual.</h1>
-        <Link href="/donate">
-          <button className="redBtn" >Donate</button>
-        </Link>
-      
+        <div className={styles.headerBottomContent}>
+          <h2 className="whtTxt">Projects Designed to</h2>
+          <h1 className="ltBlueTxt">Better Society Through Education.</h1>
+          <Link href="/donate">
+            <button className="redBtn">Donate</button>
+          </Link>
         </div>
       </div>
-      
     </>
   );
 };
-
 
 export default Navigation;
