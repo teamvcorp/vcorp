@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import styles from "./components.module.css";
 
@@ -80,6 +81,12 @@ const DonateForm = () => {
             </div>
           </fieldset>
           <fieldset>
+            <Link target='_blank' href='https://pay.thevacorp.com/GeneralDonation'>
+              Donate via Godaddy!
+            </Link>
+            <Link target='_blank' href='https://donate.stripe.com/test_bIY8yV4kL0iofPabII'>
+              Donate via Stripe!
+            </Link>
             {/* credit card form? */}
           </fieldset>
           <button type="submit">Submit</button>

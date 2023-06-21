@@ -7,6 +7,7 @@ import Navigation from "./components/nav";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 import { BiBuildingHouse } from "react-icons/bi";
+import { BsBriefcaseFill } from "react-icons/bs";
 import { GrHome } from "react-icons/gr";
 import { HiLightBulb } from "react-icons/hi";
 import {
@@ -17,6 +18,10 @@ import {
   FaPiggyBank,
   FaBookReader,
 } from "react-icons/fa";
+import { MdComputer } from "react-icons/md";
+import { TfiWrite } from "react-icons/tfi";
+
+
 
 export default function Home() {
   const pathname = usePathname();
@@ -149,7 +154,7 @@ export default function Home() {
         <h1>
           Volunteer
           <Link href={`${pathname}#pagetop`}>
-           <span><GrHome size={25} color='white' /></span> 
+           <span><GrHome size={25} /></span> 
           </Link>
         </h1>
         <div className={styles.topSection}>
@@ -199,28 +204,28 @@ export default function Home() {
       <section className={styles.careers} id="careers">
         <h1>Careers</h1>
         <div className={styles.careerTop}>
-          <Card title="Web Development" iconName="">
+          <Card title="Web Development" iconName={<MdComputer size={50}/>}>
             <ul>
-              <li>Web Stuff</li>
-              <li>Web Stuff</li>
-              <li>Web Stuff</li>
-              <li>Web Stuff</li>
+              <li>Web Design</li>
+              <li>Web Development</li>
+              <li>UX/UI</li>
+              <li>Web Maintenance</li>
             </ul>
           </Card>
-          <Card title="Grant Writing" iconName="">
+          <Card title="Grant Writing" iconName={<TfiWrite size={45}/>}>
             <ul>
-              <li>Web Stuff</li>
-              <li>Web Stuff</li>
-              <li>Web Stuff</li>
-              <li>Web Stuff</li>
+              <li>Grant Research</li>
+              <li>Grant Writing</li>
+              <li>Financial Planning</li>
+              <li>Project Management</li>
             </ul>
           </Card>
-          <Card title="Staff Member" iconName="">
+          <Card title="Staff Member" iconName={<BsBriefcaseFill size={45}/>}>
             <ul>
-              <li>Web Stuff</li>
-              <li>Web Stuff</li>
-              <li>Web Stuff</li>
-              <li>Web Stuff</li>
+              <li>Office Positions</li>
+              <li>Teaching Positions</li>
+              <li>Admin Positions</li>
+              <li>Marketing Positions</li>
             </ul>
           </Card>
         </div>
@@ -231,23 +236,21 @@ export default function Home() {
             erat, sed diam voluptua. At vero eos et accusam{" "}
           </p>
           <Link href="/">
-            <button>Apply Today</button>
+            <button className="redBtn">Apply Today</button>
           </Link>
         </div>
       </section>
       <section className={styles.resources} id="resources">
         <div className={styles.resourcesLeft}>
-          <h1>resources</h1>
-          <p>
+          <h1 className="whtTxt">resources</h1>
+          <p className="whtTxt">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero eos et accusam{" "}
           </p>
         </div>
         <section className={styles.resourceList}>
-          <Link href={`${pathname}#pagetop`}>
-            <GrHome size={25} />
-          </Link>
+       
           <h3>Links to Outside Resources</h3>
           <ul>
             <li>
@@ -267,6 +270,9 @@ export default function Home() {
             </li>
           </ul>
         </section>
+        <Link className="homeLinkWht" href={`${pathname}#pagetop`}>
+            <GrHome size={25} />
+          </Link>
       </section>
       <section className={styles.footer}>
         <Footer />

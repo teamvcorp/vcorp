@@ -143,3 +143,39 @@ text-transform: uppercase;
   flex-direction: column;
   align-items: center;
 }
+.careers {
+  background-color: var(--ltGrey);
+}
+.careers h1 {
+  padding: 5rem;
+}
+.careerTop{
+  display: flex;
+  justify-content: space-around;
+}
+.careerBottom {
+ display: flex;
+ justify-content: space-between;
+ margin: 5rem 10rem;
+}
+.careerBottom p {
+  width: 60%;
+}
+.resources {
+  background-color: var(--blue);
+  display: flex;
+  padding: 5rem;
+  grid-gap: 10rem;
+}
+.resources h1 {
+  margin-bottom: 5rem;
+}
+.resourcesLeft {
+width: 50%;
+}
+.resourceList ul{
+  color: white;
+  list-style: none;
+  font-size: 2rem;
+  line-height: 4rem;
+}
