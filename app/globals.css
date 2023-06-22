@@ -49,6 +49,9 @@ p, span {
   font-size: 2.5rem;
   line-height: 4rem;
 }
+fieldset {
+  border:none;
+}
 .italicP {
   font-style: italic;
 }
@@ -78,19 +81,38 @@ button {
   font-weight: 400;
   text-transform: uppercase;
   border-radius: 5rem;
-  border: 1px solid white;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
 }
-.homeLinkWht {
-  color: white;
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--ltBlue);
+  cursor: pointer;
 }
+.homeLink {
+position: fixed;
+z-index: 99;
+
+padding: 0 2rem;
+right: 5%;
+bottom: 5%;
+}
+.homeLink a {
+  text-shadow: 3px 5px 2px rgb(0 0 0 0.4);
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+
+
 .redBtn {
   background-color: #ff0000;
 }
 
 .navyBtn {
   background-color: #1e2338;
+
+
 }
 .leftSide {
   display: flex;
@@ -127,10 +149,21 @@ button {
   align-items: center;
   justify-content: space-between;
 }
-.rightSideVolunteer {
+
+
+.socialMediaIcon {
+  background-color: var(--blue);
+  border-radius: 100%;
+padding: 1rem;
+margin: 1rem;
 
 }
+.socialMediaIcon:hover {
+  background-color: var(--ltBlue);
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 3px 8px;
+  cursor: pointer;
 
+}
 .iconCircle {
   background-color: var(--blue);
   border-radius: 100%;
@@ -143,6 +176,54 @@ button {
 }
 .careerTxt {
   color: red;
+}
+.copyrightP {
+  font-size: 1.5rem;
+
+}
+
+/* inputs */
+.inputAll {
+
+  border: 0.25px solid var(--grey);
+  border-radius: 5px;
+  height: 3.5rem;
+}
+.inputXS {
+  width: 15rem;
+}
+.inputS {
+  width: 30rem;
+}
+.inputM {
+  width: 45rem;
+}
+.inputL {
+  width: 60rem;
+}
+.inputXL {
+  width: 80rem;
+}
+.dropDown {
+  margin-left: 2rem;
+}
+.checkBox {
+  height: 3.5rem;
+  width: 3.5rem;
+ border:none;
+  border-radius: 5px;
+}
+label {
+  font-size: 2rem;
+  display: inline-block;
+  width: 15rem;
+ 
+}
+.fullLabel{
+  width: 35rem;
+}
+.space {
+ padding-left: 5rem;
 }
 
 @media (prefers-color-scheme: dark) {

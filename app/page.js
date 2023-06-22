@@ -7,8 +7,8 @@ import Navigation from "./components/nav";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 import { BiBuildingHouse } from "react-icons/bi";
-import { BsBriefcaseFill } from "react-icons/bs";
-import { GrHome } from "react-icons/gr";
+import { BsBriefcaseFill, BsFillArrowUpSquareFill } from "react-icons/bs";
+
 import { HiLightBulb } from "react-icons/hi";
 import {
   FaRegHandshake,
@@ -153,9 +153,11 @@ export default function Home() {
       <section className={styles.volunteer} id="volunteer">
         <h1>
           Volunteer
+          <div className="homeLink">
           <Link href={`${pathname}#pagetop`}>
-           <span><GrHome size={25} /></span> 
+           <BsFillArrowUpSquareFill size={50} /><p className="homeLinkP">Top</p> 
           </Link>
+          </div>
         </h1>
         <div className={styles.topSection}>
           <div className={styles.imageContainer}>
@@ -241,8 +243,9 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.resources} id="resources">
-        <div className={styles.resourcesLeft}>
           <h1 className="whtTxt">resources</h1>
+         <div className={styles.resourcesContainer}>
+          <div className={styles.resourcesLeft}>
           <p className="whtTxt">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -251,7 +254,7 @@ export default function Home() {
         </div>
         <section className={styles.resourceList}>
        
-          <h3>Links to Outside Resources</h3>
+          <p className="whtTxt"><i>Links to Outside Resources</i> </p>
           <ul>
             <li>
               <Link href="/">SNAP</Link>
@@ -266,13 +269,12 @@ export default function Home() {
               <Link href="/">Medicaid</Link>
             </li>
             <li>
-              <Link href="/">FASFA</Link>
+              <Link href="/">FASFA</Link>   
             </li>
           </ul>
         </section>
-        <Link className="homeLinkWht" href={`${pathname}#pagetop`}>
-            <GrHome size={25} />
-          </Link>
+       
+          </div>
       </section>
       <section className={styles.footer}>
         <Footer />

@@ -31,6 +31,10 @@
     color: white;
     height: 90%;
 }
+.navLinks li:hover {
+	color: var(--blue);
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3)
+}
 
 /* header bottom-hero */
 .headerBottom {
@@ -103,3 +107,123 @@ margin-top:45vh;
 }
 
 
+/* footer */
+.footerLeft {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-evenly;
+width: 50%;
+padding: 5rem;
+}
+.footerIcons p{
+    margin: 2rem;
+}
+.iconContainer {
+  
+}
+.subscribe p{
+    margin: 5rem 2rem 0 2rem; 
+}
+.subscribe div {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    
+}
+.subscribe input {
+width: 50rem;
+height: 5rem;
+border-radius: 8px 0 0 8px;
+border: none;
+
+}
+.subscribe button {
+border-radius:0 8px 8px 0;
+width: 13rem;
+height: 5rem;
+border: none;
+box-shadow: none;
+background-color: var(--blue);
+}
+
+.subscribe button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--ltBlue);
+    cursor: pointer;
+  }
+.footerRight {
+    width: 50%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.footerRight p{
+    width: 75%;
+}
+.disclaimer {
+    display: flex;
+   width: 75%;
+
+}
+.disclaimer p{
+    font-size: 1.5rem;
+}
+.disclaimer p:hover {
+    color: var(--ltBlue);
+    cursor: pointer;
+}
+
+/* Donation Form */
+.donationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--navy);
+    width: 100%;
+    height: fit-content;
+}
+.donationForm div{
+    display: flex;
+
+   
+    border-radius: 10px;
+    background-color: var(--ltGrey);
+    width: 90%;
+    height: 80%;
+
+}
+.donationFormLeft{
+    width: 60vw;
+}
+.donationForm input{
+    margin: 2.5rem 1rem;
+}
+.donationFormRight {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+width: 40vw;
+
+}
+
+.formChart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0;
+
+   
+
+  
+}
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    
+    
+}

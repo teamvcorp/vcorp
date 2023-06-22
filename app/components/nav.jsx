@@ -21,7 +21,7 @@ const Navigation = () => {
             alt="random people"
           />
         </div>
-        <ul>
+        <ul className={styles.navLinks}>
           <li></li>
           <li>
             <Link href={`${pathname}#about`}>About</Link>

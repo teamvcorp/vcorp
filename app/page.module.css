@@ -163,19 +163,39 @@ text-transform: uppercase;
 }
 .resources {
   background-color: var(--blue);
-  display: flex;
+ 
   padding: 5rem;
-  grid-gap: 10rem;
+ 
+  height: 60vh;
 }
 .resources h1 {
   margin-bottom: 5rem;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+.resourcesContainer {
+  display: flex;
+  grid-gap: 20%;
 }
 .resourcesLeft {
 width: 50%;
+}
+.resourceList h3 {
+  margin-bottom: 5rem;
 }
 .resourceList ul{
   color: white;
   list-style: none;
   font-size: 2rem;
-  line-height: 4rem;
+  line-height: 5rem;
+  margin-left: 1rem;
+}
+.resourceList li:hover{
+  color: var(--ltBlue);
+}
+/* footer */
+.footer {
+  background-color: var(--navy);
+  color: white;
+  display: flex;
 }

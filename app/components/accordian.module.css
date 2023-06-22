@@ -1,0 +1,27 @@
+.accordianBox.box {
+    display: flex;
+   
+    align-items :center;
+    justify-content: center;
+    color: var(--navy);
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: var(--ltBlue);
+    width: 40rem;
+    height: 5rem;
+    border-radius: 3px;
+    border: 1px solid white;
+}
+
+.accordianBox.box:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+.accordianP {
+    width: 50rem;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 0px 0px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+padding: 2rem;
+font-size: 1.75rem;
+text-align: center;
+}
