@@ -145,14 +145,16 @@ export default function Home() {
             />
           </div>
           <div className="rightSide rightSideRed">
-            <h1>Donate</h1>
+            <h1>Ways to Impact</h1>
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam Lorem ipsum dolor
-              sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-              tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua
+              **Every penny contributed to VAcorp fuels the innovation and
+              endurance of our transformative projects. Choose to donate
+              anonymously or stand proudly with recognition—either way, you're
+              forging the path for the next generation of leaders in this
+              magnificent country. Together, we're stepping up to ease the
+              weight on our government's shoulders, championing solutions to
+              society's pressing challenges. Be the change. Shape the future
+              with VAcorp.**
             </p>
             <Link href="/donate">
               <button className="navyBtn">Create an Impact</button>
