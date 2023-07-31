@@ -90,6 +90,21 @@ button:hover {
   background-color: var(--ltBlue);
   cursor: pointer;
 }
+.readMore {
+  background-color: transparent;
+  box-shadow: none;
+  text-align: left;
+  font-size: 1.5rem;
+  color: var(--blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 1rem;
+}
+.readMore:hover {
+  box-shadow: none;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
+}
 .homeLink {
 position: fixed;
 z-index: 99;
@@ -120,6 +135,7 @@ bottom: 5%;
   align-items: center;
   justify-content: center;
   width: 40%;
+ 
  
   
 }
@@ -168,7 +184,7 @@ margin: 1rem;
   background-color: var(--blue);
   border-radius: 100%;
   width: 10rem;
-  height: 10rem;
+  min-height: 10rem;
   border: 1px solid white;
   display: flex;
   align-items: center;

@@ -9,7 +9,7 @@ const DonateForm = () => {
   const [data, setdata] = useState([...matrix.donationLevels]);
   const [formData, setformData] = useState({
     amount: "",
-    frequency: "",
+    frequency: "",  
     fullName: "",
   });
  
