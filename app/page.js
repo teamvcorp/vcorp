@@ -156,7 +156,7 @@ export default function Home() {
                 {readMoreState.paragraphTwo ? "See Less..." : "See More..."}
               </button>
             </p>
-            <Link href="https://www.taekwondostormlake.com/">
+            <Link href="https://www.taekwondostormlake.com/program/trip">
               <button className="navyBtn">Visit WebSite</button>
             </Link>
           </div>
