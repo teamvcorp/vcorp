@@ -1,7 +1,17 @@
 /* Header Top */
+.header {
+    /* position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 3; */
+}
+.headerLogoContainer {
+  
+
+}
 .headerTop {
-    border-bottom: 10px solid var(--blue);
-    height: 20rem;
+    border-bottom: 10px solid var(--blue);  
+    height: 20vh;
     width: 100%;
     background-color: var(--navy);
     display: flex;
@@ -10,7 +20,7 @@
 .headerTop div {
     background-color: white;
     width: 20rem;
-    height: 25rem;
+    height: 25rem; 
     margin-left: 4rem;
     display: flex;
     align-items: center;
@@ -38,13 +48,17 @@
 
 /* header bottom-hero */
 .headerBottom {
+
     background-image: url(/group.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 85vh;
+   
     width: 100%;
     display: flex;
     flex-direction: column;
+  
+ 
 }
 
 .headerBottomContent {
@@ -61,12 +75,12 @@
 margin-top:45vh;
 }
 
-.headerBottom p{
+/* .headerBottom p{
     float: right;
     text-align: right;
     font-size: 3rem;
     font-style: italic;
-}
+} */
 
 .headerBottom button {
     margin: 5rem 0;
@@ -184,7 +198,7 @@ background-color: var(--blue);
     justify-content: center;
     background-color: var(--navy);
     width: 100%;
-    height: fit-content;
+    /* height: fit-content; */
 }
 .donationForm div{
     display: flex;

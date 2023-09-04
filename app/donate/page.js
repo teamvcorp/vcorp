@@ -1,9 +1,9 @@
 import React from 'react'
 import DonateForm from '../components/DonateForm'
-const Page = () => {
+const Page = ({searchParams}) => {
   return (
     <>
-    <DonateForm />
+    <DonateForm amount={searchParams.amount}/>
     </>
   )
 }

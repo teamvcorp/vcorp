@@ -9,6 +9,8 @@ import Card from "./components/Card";
 import Footer from "./components/Footer";
 import { BiBuildingHouse } from "react-icons/bi";
 import { BsBriefcaseFill, BsFillArrowUpSquareFill } from "react-icons/bs";
+import { FaNotesMedical } from "react-icons/fa";
+import { MdOutlineNightShelter, MdFastfood } from "react-icons/md";
 
 import { HiLightBulb } from "react-icons/hi";
 import {
@@ -19,7 +21,7 @@ import {
   FaPiggyBank,
   FaBookReader,
 } from "react-icons/fa";
-import { MdComputer } from "react-icons/md";
+import { MdComputer } from "react-icons/md"; 
 import { TfiWrite } from "react-icons/tfi";
 
 export default function Home() {
@@ -162,53 +164,148 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className={styles.donate} id="donate">
         <div className={styles.donateContainer}>
-          <div className="leftSide greyLeftSide">
-            <Image
-              className={styles.donateImage}
-              src="/education.jpeg"
-              width={400}
-              height={250}
-              alt="random person"
-            />
-            <Image
-              className={styles.donateImage}
-              src="/housing.jpeg"
-              width={400}
-              height={250}
-              alt="random person"
-            />
-            <Image
-              className={styles.donateImage}
-              src="/family.jpeg"
-              width={400}
-              height={250}
-              alt="random person"
-            />
+          <div className={styles.donateTop}>
+            <div className={styles.donateInfo}>
+              <h1>How does your donation help?</h1>
+              <p>
+                Your donation will be put to good use. The Von Der Becke Academy
+                Corp. creates projects designed to improve the community through
+                education. We give people the resources they need to thrive
+                whether it be housing, food or medical and make sure they have
+                the education they need to sustain their new and improved
+                environment.{" "}
+              </p>
+            </div>
+            <div className={styles.donorLevels}>
+              <h1>Donor Levels</h1>
+              <p>
+                Each Donor Level has a goal of $500,000. Check out the progress
+                of each level. Ask your friends to help out.
+              </p>
+              <h2>Choose a Donor Level</h2>
+              <ul className={styles.donorLevelList}>
+                <li className="blue topRadius">
+                  <Link
+                    href={{
+                      pathname: "/donate",
+                      query: { amount: 5000000 },
+                    }}
+                    amount="50000"
+                  >
+                    Platinum Donor $50,000
+                  </Link>
+                </li>
+                <li className="purple">
+                  <Link
+                    href={{
+                      pathname: "/donate",
+                      query: { amount: 1000000 },
+                    }}
+                    amount="50000"
+                  >
+                    Diamond Donor $10,000
+                  </Link>
+                </li>
+                <li className="yellow">
+                  <Link
+                    href={{
+                      pathname: "/donate",
+                      query: { amount: 500000 },
+                    }}
+                    amount="50000"
+                  >
+                    Gold Donor $5,000
+                  </Link>
+                </li>
+                <li className="coral">
+                  <Link
+                    href={{
+                      pathname: "/donate",
+                      query: { amount: 100000 },
+                    }}
+                    amount="50000"
+                  >
+                    Silver Donor $1,000
+                  </Link>
+                </li>
+                <li className="pink">
+                  <Link
+                    href={{
+                      pathname: "/donate",
+                      query: { amount: 50000 },
+                    }}
+                    amount="50000"
+                  >
+                    Bronze Donor $500
+                  </Link>
+                </li>
+                <li className="green bottomRadius">
+                  <Link
+                    href={{
+                      pathname: "/donate",
+                      query: { amount: 10000 },
+                    }}
+                    amount="50000"
+                  >
+                    Iron Donor $100
+                  </Link>
+                </li>
+              </ul>
+              <div className={styles.otherAmountLink}>
+                <Link href="/donate">Other Amount</Link>
+              </div>
+            </div>
           </div>
-          <div className="rightSide rightSideRed">
-            <h1>Ways to Impact</h1>
+          <div className={styles.donateBottom}>
+            <div className={styles.donateInfoCard}>
+              <span>
+                {" "}
+                <MdOutlineNightShelter size={50} />{" "}
+              </span>
+              <h1>582,500</h1>
+              <p>
+                Homeless People in the US.<sup>1</sup>
+              </p>
+            </div>
+            <div className={styles.donateInfoCard}>
+              <span>
+                {" "}
+                <FaNotesMedical size={50} />{" "}
+              </span>
+              <h1>27,400,000</h1>
+              <p>
+                Uninsured People in the US.<sup>2</sup>
+              </p>
+            </div>
+            <div className={styles.donateInfoCard}>
+              <span>
+                {" "}
+                <MdFastfood size={50} />{" "}
+              </span>
+              <h1>119 Billion</h1>
+              <p>
+                Pounds of Food Waste Each Year in the US.<sup>3</sup>
+              </p>
+            </div>
+          </div>
+          <div className={styles.references}>
             <p>
-              Every penny contributed to VAcorp fuels the innovation and
-              endurance of our transformative projects. Choose to donate
-              anonymously or stand proudly with recognition—either way, you're
-              forging the path for the next generation of leaders in this
-              magnificent country. Together, we're stepping up to ease the
-              weight on our government's shoulders, championing solutions to
-              society's pressing challenges. Be the change. Shape the future
-              with VAcorp.
+              1.
+              https://www.huduser.gov/portal/sites/default/files/pdf/2022-AHAR-Part-1.pdf
+              2. https://www.cdc.gov/nchs/data/nhis/earlyrelease/insur202212.pdf
+              3.
+              https://www.feedingamerica.org/our-work/reduce-food-waste#:~:text=How%20much%20food%20waste%20is,food%20in%20America%20is%20wasted.
             </p>
-            <Link href="/donate">
-              <button className="navyBtn">Create an Impact</button>
-            </Link>
           </div>
         </div>
       </section>
       <section className={styles.volunteer} id="volunteer">
         <h1>
           Volunteer
-          <div className="homeLink">
+          <div className={styles.homeLink}>
             <Link href={`${pathname}#pagetop`}>
               <BsFillArrowUpSquareFill size={50} />
               <p className="homeLinkP">Top</p>
@@ -228,12 +325,12 @@ export default function Home() {
           <div className="rightSide rightSideVolunteer">
             <h2>you can be a hero!</h2>
             <p>
-              Volunteer today and be part
-              of a dedicated team striving for political change and progress.
-              Whether you're an experienced professional advocating for reform
-              or an enthusiastic individual eager to contribute to our cause,
-              your efforts can make a difference. If you believe in building a
-              brighter future for our nation, join us.
+              Volunteer today and be part of a dedicated team striving for
+              political change and progress. Whether you're an experienced
+              professional advocating for reform or an enthusiastic individual
+              eager to contribute to our cause, your efforts can make a
+              difference. If you believe in building a brighter future for our
+              nation, join us.
             </p>
             <Link href="/">
               <button className="redBtn">Get more info </button>

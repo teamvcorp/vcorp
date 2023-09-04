@@ -1,42 +1,50 @@
-
 /* .main {
   padding-left: 4rem;
 } */
 
 /* page */
-.about, .donate, .volunteer, .careers {
- min-height: 100vh;
- width: 100%;
- border: 2px solid var(--navy);
+.about,
+.donate,
+.volunteer,
+.careers {
+  min-height: 100vh;
+  width: 100%;
+
  
+
 }
 
-/* about */
+/* about */  
 .about {
- background-image: url(/lightbulb.jpeg); 
- background-repeat: no-repeat;
- background-size: cover;
-padding: 5rem;
+
+  background-image: url(/lightbulb.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem; 
+  max-height: 80vh; 
+  position: relative;
+
+
 }
 
-.aboutContainer {  
+.aboutContainer {
   margin-left: 5rem;
+  height: 100%;
+  
+
 }
 .about h1 {
-  margin-top: 10560.-+01rem;
-}
-  .about h2 {
 
 }
-  .about h3 {
+.about h2 {
+}
+.about h3 {
   margin: 6rem 0;
 }
-  .about p {
-  width: 70%;
+.about p {
+  width: 60%;
   margin-bottom: 3rem;
   text-align: justify;
-  
- 
 }
 
 /* projects */
@@ -50,12 +58,12 @@ padding: 5rem;
   min-height: 90vh;
   background-color: var(--ltBlue);
 }
+
 .projects h1 {
   display: flex;
   align-items: center;
   background-color: var(--navy);
   padding-left: 5rem;
- 
 }
 
 .line {
@@ -65,61 +73,162 @@ padding: 5rem;
 .projectContainer div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 30%;
   padding: 3rem;
-  text-align: justify;
+  text-align: center;
   grid-gap: 5rem;
 }
-
-
+.projectBtn {
+  background-color: var(--navy);
+}
+.projectBtn:hover {
+  background-color: var(--ltGrey);
+  color: var(--navy);
+  transform: scale(1.05);
+}
 /* donate */
-.donate {
-  height:100%;
-
-}
 .donateContainer {
-  display: flex; 
-}
-.donateContainer image {
-  border-radius: 10px;
-}
-.donate h1 {
- align-self: flex-start;
- padding-left: 12rem;
-
-}
-.donate p {
  
 
-  width: 80%;
+
+}
+.donateTop {
+  padding: 10rem;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-around;
+}
+.donateInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.donateInfo h1 {
+font-size: 4.5rem;
+font-weight: 900;
+margin-bottom: 2rem;
+}
+.donateInfo p {
   line-height: 6rem;
 }
-.donateImage {
-  border-radius: 10px;
-  border: 3px solid var(--navy);
+
+.donorLevels {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
 }
 
+.donorLevels h1 {
+font-size: 4.5rem;
+font-weight: 900;
+margin-bottom: 2rem;
+}
+.donorLevels p{
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+.donorLevels h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+.donorLevelList li {
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.5);
+ font-size: 2.5rem;
+ border: 2px solid white;
+ color: white;
+ padding: 1rem 0 1rem 3rem;
+}
+.donorLevels a {
+  font-size: 2.5rem;
+  text-align: right;
+  color:white;
+}
+.otherAmountLink a {
+  color: var(--blue);
+  text-decoration: underline;
+ 
+}
+.donateBottom {
+display: flex;
+justify-content:center;
+grid-gap: 5rem;
+  background-color: var(--blue);
+  height: 15rem;
+  
+}
+.donateInfoCard {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: var(--ltBlue);
+width: 30rem;
+height: 20rem;
+border-radius: 15px;
+padding: 1.5rem;
+transform: translateY(-6rem);
+}
+.donateInfoCard h1 {
+  font-size: 4rem;
+  color: white;
+  font-weight: 900;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.5);
+}
+.donateInfoCard p {
+  font-size: 1.75rem;
+  text-align: center;
+  line-height: 2.5rem;
+  margin-top: .5rem;
+}
+.references {
+  background-color: var(--blue);
+}
+.references p {
+  color: white;
+  font-size: 1.25rem;
+  text-align: center;
+}
+/* to the top button  */
+.homeLink {
+  position: fixed;
+  z-index: 99;
+  color: var(--ltGrey);
+ 
+  padding: 0 2rem;
+  right: 5%;
+  bottom: 5%;
+  }
+  .homeLink a {
+   
+    text-shadow: 2px 2px 2px rgb(0 0 0 0.9);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  }
 /* volunteer */
 
 .volunteer {
   background-image: url(/clouds.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   width: 100%;
 }
 .volunteer h1 {
   display: flex;
   justify-content: space-between;
-  background-color: var(--blue);
-  color: white;
+  background-color: white;
+  color: var(--navy);
   padding: 1rem 5rem;
 }
 
 .volunteer h2 {
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 .volunteer p {
   width: 80%;
@@ -130,7 +239,6 @@ text-transform: uppercase;
 .imageContainer {
   width: 50%;
   height: 68vh;
-  
 }
 .bottomSection {
   background-color: var(--blue);
@@ -139,7 +247,6 @@ text-transform: uppercase;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
 }
 .bottomSection span {
   display: flex;
@@ -152,23 +259,23 @@ text-transform: uppercase;
 .careers h1 {
   padding: 5rem;
 }
-.careerTop{
+.careerTop {
   display: flex;
   justify-content: space-around;
 }
 .careerBottom {
- display: flex;
- justify-content: space-between;
- margin: 5rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 10rem;
 }
 .careerBottom p {
   width: 60%;
 }
 .resources {
   background-color: var(--blue);
- 
+
   padding: 5rem;
- 
+
   height: 60vh;
 }
 .resources h1 {
@@ -181,19 +288,19 @@ text-transform: uppercase;
   grid-gap: 20%;
 }
 .resourcesLeft {
-width: 50%;
+  width: 50%;
 }
 .resourceList h3 {
   margin-bottom: 5rem;
 }
-.resourceList ul{
+.resourceList ul {
   color: white;
   list-style: none;
   font-size: 2rem;
   line-height: 5rem;
   margin-left: 1rem;
 }
-.resourceList li:hover{
+.resourceList li:hover {
   color: var(--ltBlue);
 }
 /* footer */

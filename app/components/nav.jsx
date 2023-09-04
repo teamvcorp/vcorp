@@ -9,15 +9,16 @@ import { usePathname } from "next/navigation";
 const Navigation = () => {
   const pathname = usePathname();
 
-  return (
-    <>
+  return (  
+    <>  
+    <div className={styles.header}>
       <div className={styles.headerTop}>
         <div className={styles.headerLogoContainer}>
           <Image
             className={styles.headerLogo}
             src="/valogo.png"
             width={175}
-            height={200}
+            height={200} 
             alt="random people"
           />
         </div>
@@ -43,6 +44,8 @@ const Navigation = () => {
           </li>
         </ul>{" "}
       </div>
+      </div>
+
 
       <div className={styles.headerBottom}>
         <div className={styles.headerBottomContent}>
