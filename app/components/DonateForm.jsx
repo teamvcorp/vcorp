@@ -8,9 +8,13 @@ import { matrix } from "../data/matrix.js";
 import "./donate.css";
 import CheckoutForm from "./CheckoutForm";
 
+// const stripePromise = loadStripe(
+//   "pk_live_51NVkTHFOfT7vP5JsCPOhG7Fd8scivouuEK4EstljVXjIy3pop9JZ90R4SWtFTc4CiSc05xAdXtCCm4B0hCaoKNpL007npgFlor"
+// );
 const stripePromise = loadStripe(
-  "pk_live_51NVkTHFOfT7vP5JsCPOhG7Fd8scivouuEK4EstljVXjIy3pop9JZ90R4SWtFTc4CiSc05xAdXtCCm4B0hCaoKNpL007npgFlor"
+  "pk_test_51NVkTHFOfT7vP5Jsfy5z4Yh4R2uxDQuwgB61hbR709SN4CZJTvdwFBmHXjv1T8dbMcAGmJhezCCI24o5IgD6fohC00UZSy3Gyj"
 );
+
 
 const DonateForm = ({ amount }) => {
   const [clientSecret, setClientSecret] = useState("");

@@ -21,7 +21,7 @@ import {
   FaPiggyBank,
   FaBookReader,
 } from "react-icons/fa";
-import { MdComputer } from "react-icons/md"; 
+import { MdComputer } from "react-icons/md";
 import { TfiWrite } from "react-icons/tfi";
 
 export default function Home() {
@@ -166,17 +166,17 @@ export default function Home() {
       </section>
 
       <section className={styles.donate} id="donate">
+        <h3>Donate</h3>
         <div className={styles.donateContainer}>
           <div className={styles.donateTop}>
             <div className={styles.donateInfo}>
               <h1>How does your donation help?</h1>
               <p>
-                Your donation will be put to good use. The Von Der Becke Academy
-                Corp. creates projects designed to improve the community through
-                education. We give people the resources they need to thrive
-                whether it be housing, food or medical and make sure they have
-                the education they need to sustain their new and improved
-                environment.{" "}
+                The Von Der Becke Academy Corp. creates projects designed to
+                improve the community through education. We give people the
+                resources they need to thrive whether it be housing, food or
+                medical and make sure they have the education they need to
+                sustain their new and improved environment.{" "}
               </p>
             </div>
             <div className={styles.donorLevels}>
@@ -273,7 +273,7 @@ export default function Home() {
             <div className={styles.donateInfoCard}>
               <span>
                 {" "}
-                <FaNotesMedical size={50} />{" "}
+                <FaNotesMedical size={40} />{" "}
               </span>
               <h1>27,400,000</h1>
               <p>
@@ -283,11 +283,11 @@ export default function Home() {
             <div className={styles.donateInfoCard}>
               <span>
                 {" "}
-                <MdFastfood size={50} />{" "}
+                <MdFastfood size={40} />{" "}
               </span>
               <h1>119 Billion</h1>
               <p>
-                Pounds of Food Waste Each Year in the US.<sup>3</sup>
+                Lbs. of Food Waste Yearly in the US.<sup>3</sup>
               </p>
             </div>
           </div>

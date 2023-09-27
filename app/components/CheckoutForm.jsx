@@ -84,9 +84,7 @@ export default function CheckoutForm({amount}) {
 
   return (
     <>
-    <div>
-      <p>Thank you for joining the ${amount/100} club after </p>
-     </div>
+
     <form id="payment-form" onSubmit={handleSubmit}>
       <LinkAuthenticationElement
         id="link-authentication-element"
@@ -100,6 +98,9 @@ export default function CheckoutForm({amount}) {
       </button>
       {/* Show any error or success messages */}
       {message && <div id="payment-message">{message}</div>}
+    <div>
+      <p>Thank you for joining the ${amount/100} club after </p>
+     </div>
     </form>
     </>
   );
