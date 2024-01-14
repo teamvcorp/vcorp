@@ -60,6 +60,9 @@ fieldset {
 .italicP {
   font-style: italic;
 }
+.boldP {
+  font-weight: bolder;
+}
 .headerNavTxt {
   font-size: 3rem;
   font-weight: 700;

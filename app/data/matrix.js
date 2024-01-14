@@ -22,3 +22,9 @@ export const matrix = {
     },
   ],
 };
+export const banner = {
+  featuredProjects: [
+    { title: "Equitable Economy", image: "image1.png", id: 1 },
+    { title: "Limitless Learning", image: "image2.png", id: 2 },
+  ],
+};

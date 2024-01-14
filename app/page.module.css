@@ -15,28 +15,26 @@
 }
 
 /* about */  
-.about {
 
-  background-image: url(/lightbulb.jpeg);
+
+.aboutContainer {
+  background-image: url(/lightbulbGra.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5rem; 
-  max-height: 80vh; 
+
+min-height: 90vh; 
   position: relative;
-
-
+    
 }
 
-.aboutContainer {
-  margin-left: 5rem;
-  height: 100%;
-  
-
-}
 .about h1 {
-
+  background-color: var(--blue);
+  padding: 1.5rem 0 0 3rem;
 }
 .about h2 {
+  background-color: var(--blue);
+  padding: 0 0 1.5rem 3rem;   
 }
 .about h3 {
   margin: 6rem 0;

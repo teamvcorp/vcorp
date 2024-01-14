@@ -16,7 +16,7 @@ const Navigation = () => {
         <div className={styles.headerLogoContainer}>
           <Image
             className={styles.headerLogo}
-            src="/valogo.png"
+            src="/valogo1.png"
             width={175}
             height={200} 
             alt="random people"
@@ -36,12 +36,7 @@ const Navigation = () => {
           <li>
             <Link href={`${pathname}#donate`}>Donate</Link>
           </li>
-          <li>
-            <Link href={`${pathname}#careers`}>Careers</Link>
-          </li>
-          <li>
-            <Link href={`${pathname}#resources`}>Resources</Link>
-          </li>
+          
         </ul>{" "}
       </div>
       </div>

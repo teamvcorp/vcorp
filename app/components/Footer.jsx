@@ -28,8 +28,7 @@ const Footer = () => {
       <div className={styles.footerRight}>
         <h3>Mission Statement</h3>
         <p>
-          Enabling transformative change through the power of education,
-          compassion, and innovative problem-solving.
+        Enabling social contagion through the power of education, compassion, and innovation.
         </p>
         <div className={styles.disclaimer}>
         <p>Privacy Policy</p> <p> Terms of Service</p> <p> Financial Records</p> 
