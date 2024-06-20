@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const AboutCarousel = () => {
   return (
     <>
-      <Carousel showThumbs={false} autoPlay>
+      <Carousel showThumbs={false} autoPlay infiniteLoop>
         {banner.featuredProjects.map((project) => (
           <div key={project.id}>
             <img src={project.image} alt={project.title} />

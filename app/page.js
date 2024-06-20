@@ -40,7 +40,7 @@ export default function Home() {
         <div className={styles.aboutContainer}>
           <h3 className="ltBlueTxt">Mission Statement</h3>
           <p className="italicP boldP whtTxt">
-          Enabling social contagion through the power of education, compassion, and innovation.
+          Promoting social impact through the power of education, compassion, and innovation.
           </p>
           <p className="whtTxt">
             Imagine a world where living is uncomplicated, where essentials are
