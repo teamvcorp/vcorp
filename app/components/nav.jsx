@@ -24,17 +24,14 @@ const Navigation = () => {
         </div>
         <ul className={styles.navLinks}>
           <li></li>
-          <li>
-            <Link href={`${pathname}#about`}>About</Link>
+                  <li>
+            <Link href={`${pathname}#projects`}>Programs</Link>
           </li>
           <li>
-            <Link href={`${pathname}#projects`}>Projects</Link>
+            <Link href={`${pathname}#volunteer`}>Get Involved</Link>
           </li>
           <li>
-            <Link href={`${pathname}#volunteer`}>Volunteer</Link>
-          </li>
-          <li>
-            <Link href={`${pathname}#donate`}>Donate</Link>
+            <Link href={`${pathname}#donate`}>Donations</Link>
           </li>
           
         </ul>{" "}
@@ -44,11 +41,7 @@ const Navigation = () => {
 
       <div className={styles.headerBottom}>
         <div className={styles.headerBottomContent}>
-          <h2 className="whtTxt">Projects Designed to</h2>
-          <h1 className="ltBlueTxt">Better Society Through Education.</h1>
-          <Link href="/donate">
-            <button className="redBtn">Donate</button>
-          </Link>
+          <h1 className="ltBlueTxt">Better Society Through Education.</h1>      
         </div>
       </div>
     </>
