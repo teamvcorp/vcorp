@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Button from '../components/ui/Button';
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaBirthdayCake } from 'react-icons/fa';
 
-const RegistrationPage = () => {
+const RegistrationForm = () => {
   const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -357,6 +357,14 @@ const RegistrationPage = () => {
         </div>
       </section>
     </main>
+  );
+};
+
+const RegistrationPage = () => {
+  return (
+    <Suspense fallback={<div className="flex-1 bg-deep-black py-20 text-center text-white">Loading...</div>}>
+      <RegistrationForm />
+    </Suspense>
   );
 };
 

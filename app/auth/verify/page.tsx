@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Button from '../../components/ui/Button';
 import { FaCheckCircle, FaExclamationTriangle, FaSpinner } from 'react-icons/fa';
 
-const VerifyPage = () => {
+const VerifyContent = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [status, setStatus] = useState<'verifying' | 'success' | 'error'>('verifying');
@@ -138,6 +138,23 @@ const VerifyPage = () => {
         </div>
       </section>
     </main>
+  );
+};
+
+const VerifyPage = () => {
+  return (
+    <Suspense fallback={
+      <main className="flex-1 bg-deep-black">
+        <section className="py-20 px-6">
+          <div className="max-w-2xl mx-auto text-center">
+            <FaSpinner className="text-neon-cyan text-6xl animate-spin mx-auto mb-6" />
+            <p className="text-white text-2xl">Loading...</p>
+          </div>
+        </section>
+      </main>
+    }>
+      <VerifyContent />
+    </Suspense>
   );
 };
 
