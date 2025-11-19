@@ -88,7 +88,10 @@ export async function POST(request) {
         await existingUser.save();
 
         // Generate magic link with redirect URL
-        const magicLink = `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/auth/verify?token=${verificationToken}&email=${encodeURIComponent(email)}&redirect=${encodeURIComponent(validRedirectUrl)}`;
+        const host = request.headers.get('host');
+        const protocol = request.headers.get('x-forwarded-proto') || 'https';
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `${protocol}://${host}`;
+        const magicLink = `${baseUrl}/auth/verify?token=${verificationToken}&email=${encodeURIComponent(email)}&redirect=${encodeURIComponent(validRedirectUrl)}`;
 
         // Send verification email
         await resend.emails.send({
@@ -172,7 +175,10 @@ export async function POST(request) {
     await newUser.save();
 
     // Generate magic link with redirect URL
-    const magicLink = `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/auth/verify?token=${verificationToken}&email=${encodeURIComponent(email)}&redirect=${encodeURIComponent(validRedirectUrl)}`;
+    const host = request.headers.get('host');
+    const protocol = request.headers.get('x-forwarded-proto') || 'https';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `${protocol}://${host}`;
+    const magicLink = `${baseUrl}/auth/verify?token=${verificationToken}&email=${encodeURIComponent(email)}&redirect=${encodeURIComponent(validRedirectUrl)}`;
 
     // Send magic link via email
     try {

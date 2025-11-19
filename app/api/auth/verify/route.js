@@ -114,7 +114,10 @@ export async function POST(request) {
 
         if (!isEnrolled) {
           // User not enrolled - redirect to dashboard for enrollment
-          const dashboardUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/user/dashboard`;
+          const host = request.headers.get('host');
+          const protocol = request.headers.get('x-forwarded-proto') || 'https';
+          const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `${protocol}://${host}`;
+          const dashboardUrl = `${baseUrl}/user/dashboard`;
           const enrollRedirect = `${dashboardUrl}?enroll=${programFromUrl}&returnTo=${encodeURIComponent(validRedirectUrl)}`;
           
           console.log('🔄 Redirecting to onboarding:', enrollRedirect);
@@ -236,7 +239,10 @@ export async function POST(request) {
         );
         if (!isEnrolled) {
           // User not enrolled - redirect to dashboard for enrollment
-          const dashboardUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/user/dashboard`;
+          const host = request.headers.get('host');
+          const protocol = request.headers.get('x-forwarded-proto') || 'https';
+          const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `${protocol}://${host}`;
+          const dashboardUrl = `${baseUrl}/user/dashboard`;
           const enrollRedirect = `${dashboardUrl}?enroll=${programFromUrl}&returnTo=${encodeURIComponent(validRedirectUrl)}`;
 
           const authToken = generateAuthToken(user);
