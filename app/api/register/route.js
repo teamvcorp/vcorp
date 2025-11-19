@@ -136,14 +136,12 @@ export async function POST(request) {
           </html>
         `,
       });
-      console.log('✅ Magic link email sent to:', email);
     } catch (emailError) {
       console.error('❌ Failed to send email:', emailError);
       // Continue anyway - user is created, we'll log the link
     }
 
     console.log('🔗 Magic Link:', magicLink);
-    console.log('✅ User created:', newUser._id);
 
     return NextResponse.json(
       {

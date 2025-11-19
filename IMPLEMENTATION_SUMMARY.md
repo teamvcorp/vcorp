@@ -96,7 +96,7 @@ Fully implemented for all 4 programs with:
    - Youth, Adult, Family plans ($80-$200/mo)
    - Belt testing, tournaments, self-defense
 
-4. **Edyens Gate** (`/programs/edyensgate`)
+4. **Edyens Gate** (`/programs/edynsgate`)
    - Online learning platform
    - Individual to Enterprise pricing ($30+/mo)
    - Courses, webinars, certifications

@@ -92,7 +92,6 @@ export async function POST(request) {
             </html>
           `,
         });
-        console.log('✅ PIN code sent to:', email);
       } catch (emailError) {
         console.error('❌ Failed to send email:', emailError);
         return NextResponse.json(
@@ -169,7 +168,6 @@ export async function POST(request) {
           </html>
         `,
       });
-      console.log('✅ Magic link sent to:', email);
     } catch (emailError) {
       console.error('❌ Failed to send email:', emailError);
       return NextResponse.json(

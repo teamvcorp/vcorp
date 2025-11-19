@@ -15,6 +15,7 @@ const VerifyContent = () => {
     const verifyEmail = async () => {
       const token = searchParams?.get('token');
       const email = searchParams?.get('email');
+      const redirectUrl = searchParams?.get('redirect');
 
       if (!token || !email) {
         setStatus('error');
@@ -28,7 +29,7 @@ const VerifyContent = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ token, email }),
+          body: JSON.stringify({ token, email, redirectUrl }),
         });
 
         const data = await response.json();
@@ -37,10 +38,30 @@ const VerifyContent = () => {
           setStatus('success');
           setMessage(data.message || 'Email verified successfully!');
           
-          // Redirect to dashboard after 2 seconds
-          setTimeout(() => {
-            router.push('/user/dashboard');
-          }, 2000);
+          // Store user info in localStorage for other pages
+          if (data.user) {
+            localStorage.setItem('vcorp_user_email', data.user.email);
+            localStorage.setItem('vcorp_user_id', data.user.id);
+            localStorage.setItem('vcorp_user_name', `${data.user.firstName} ${data.user.lastName}`);
+          }
+          
+          // Check if enrollment is required first
+          if (data.requiresEnrollment && data.redirectUrl) {
+            // Redirect to VCorp dashboard for onboarding
+            setTimeout(() => {
+              window.location.href = data.redirectUrl;
+            }, 1000);
+          } else if (data.redirectUrl) {
+            // External redirect with token (user is fully enrolled)
+            setTimeout(() => {
+              window.location.href = data.redirectUrl;
+            }, 2000);
+          } else {
+            // Otherwise redirect to internal dashboard
+            setTimeout(() => {
+              router.push('/user/dashboard');
+            }, 2000);
+          }
         } else {
           setStatus('error');
           setMessage(data.error || 'Verification failed. Please try again.');
